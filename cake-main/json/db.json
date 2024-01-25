@@ -27,11 +27,11 @@
       { "id": 20, "name": "Lavender Lemon Cupcake", "cate_id": 1, "price": 15.99, "detail": "Delicate lavender-infused lemon cupcake", "image": "product-20.jpg" }
     ],
     "orders": [
-      { "id": 1, "customer_name": "Bob Johnson", "customer_address": "789 Elm St", "customer_email": "bob@example.com", "customer_phone_number": "555-9876", "created_date": "2024-01-07", "status": "Processing" }
+      { "id": 1, "cus_name": "Bob Johnson", "cus_address": "789 Elm St", "cus_email": "bob@example.com", "phone_number": "555-9876", "created_date": "2024-01-07", "status": "Processing" }
     ],
     "order_details": [
-      { "order_id": 1, "product_id": 1, "quantity": 1, "unit_price": 29.99 },
-      { "order_id": 1, "product_id": 2, "quantity": 2, "unit_price": 24.99 }
+      { "order_id": 1, "product_id": 1, "quantity": 1, "unit_price": "29.99$" },
+      { "order_id": 1, "product_id": 2, "quantity": 2, "unit_price": "24.99$" }
     ]
   }
   

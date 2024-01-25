@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var apiUrl = "http://localhost:3000";  // Cập nhật đường dẫn phù hợp với server của bạn
 
     // Hàm để thêm sản phẩm vào giao diện
-    function addProductToUI(product,categories) {
+    function addProductToUI(product) {
         var productList = document.getElementById("product");
 
         var productItem = document.createElement("div");
@@ -29,6 +29,24 @@ document.addEventListener("DOMContentLoaded", function () {
         productList.appendChild(productItem);
     }
     
+
+    function addorderToUI(order) {
+        var orderList = document.getElementById("order");
+
+        var orderItem = document.createElement("tr");
+        orderItem.innerHTML = `
+            <td><input class="form-check-input" type="checkbox"></td>
+            <td>${order.created_date}</td>
+            <td>${order.id}</td>
+            <td>${order.cus_name}</td>
+            <td>${order.phone_number}</td>
+            <td>${order.status}</td>
+            <td><a class="btn btn-sm btn-primary" href="">xóa</a></td>
+        `;
+
+        orderList.appendChild(orderItem);
+    }
+    
     // Gọi API để lấy danh sách sản phẩm bằng Fetch API
     fetch(`${apiUrl}/products`)
         .then(response => {
@@ -46,16 +64,32 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => {
             console.error("Lỗi khi tải dữ liệu từ API (products):", error);
         });
-        axios.get(`${apiUrl}/categories`)
-        .then(response => {
-            var categories = response.data;
+        // axios.get(`${apiUrl}/categories`)
+        // .then(response => {
+        //     var categories = response.data;
 
-            // Hiển thị danh sách danh mục lên giao diện và thêm vào slider
-            categories.forEach(category => {
-                addCategoryToSlider(category);
+        //     // Hiển thị danh sách danh mục lên giao diện và thêm vào slider
+        //     categories.forEach(category => {
+        //         addCategoryToSlider(category);
+        //     });
+        // })
+        // .catch(error => {
+        //     console.error("Lỗi khi tải dữ liệu từ API (categories):", error);
+        // });
+        fetch(`${apiUrl}/orders`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(orders => {
+            // Hiển thị từng đơn hàng lên giao diện
+            orders.forEach(order => {
+                addorderToUI(order);
             });
         })
         .catch(error => {
-            console.error("Lỗi khi tải dữ liệu từ API (categories):", error);
+            console.error("Lỗi khi tải dữ liệu từ API (orders):", error);
         });
 });
