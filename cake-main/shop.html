@@ -168,23 +168,25 @@
             <div class="shop__option">
                 <div class="row">
                     <div class="col-lg-7 col-md-7">
-                        <div class="shop__option__search">
-                            <form action="#">
-                                <select>
-                                    <option value="">Categories</option>
-                                    <option value="">Red Velvet</option>
-                                    <option value="">Cup Cake</option>
-                                    <option value="">Biscuit</option>
+                        <div>
+                            <form id="categoryForm">
+                                <label for="categorySelect">Chọn danh mục:</label>
+                                <select id="categorySelect">
+                                    <!-- Option sẽ được thêm thông qua JavaScript -->
                                 </select>
-                                <input type="text" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
+                                <label for="minPrice">Giá tối thiểu:</label>
+                                <input type="number" id="minPrice" name="minPrice" min="0" step="0.01">
+                                <label for="maxPrice">Giá tối đa:</label>
+                                <input type="number" id="maxPrice" name="maxPrice" min="0" step="0.01">
+                
+                                <button type="submit">Lấy sản phẩm</button>
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-md-5">
+                    <!-- <div class="col-lg-5 col-md-5">
                         <div class="shop__option__right">
-                            <select>
-                                <option value="">Default sorting</option>
+                            <select >
+                                <option value="" >Default sorting</option>
                                 <option value="">A to Z</option>
                                 <option value="">1 - 8</option>
                                 <option value="">Name</option>
@@ -192,10 +194,10 @@
                             <a href="#"><i class="fa fa-list"></i></a>
                             <a href="#"><i class="fa fa-reorder"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="row" id="product" id="categories">
+            <div class="row" id="product" >
 
             </div>
             <div class="shop__last__option">
@@ -205,7 +207,8 @@
                             <a href="#">1</a>
                             <a href="#">2</a>
                             <a href="#">3</a>
-                            <a href="#"><span class="arrow_carrot-right"></span></a>
+                            <a href="#" ><span class="arrow_carrot-right"></span></a>
+                            
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -296,8 +299,9 @@
 <!-- Search End -->
 
 <!-- Js Plugins -->
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="./json/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.nice-select.min.js"></script>

@@ -11,9 +11,9 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -184,7 +184,7 @@
                             <h2>Cakes and bakes from the house of Queens!</h2>
                         </div>
                         <p>The "Cake Shop" is a Jordanian Brand that started as a small family business. The owners are
-                        Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.</p>
+                            Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -218,9 +218,9 @@
     <!-- About Section End -->
 
     <!-- Categories Section Begin -->
-    <div class="categories">
+    <div class="categories" id="cate">
         <div class="container">
-            <div class="row" >
+            <div class="row">
                 <div class="categories__slider owl-carousel">
                     <div class="categories__item">
                         <div class="categories__item__icon">
@@ -267,6 +267,18 @@
     <!-- Product Section Begin -->
     <section class="product spad">
         <div class="container">
+            <form id="categoryForm">
+                <label for="categorySelect">Chọn danh mục:</label>
+                <select id="categorySelect">
+                    <!-- Option sẽ được thêm thông qua JavaScript -->
+                </select>
+                <label for="minPrice">Giá tối thiểu:</label>
+                <input type="number" id="minPrice" name="minPrice" min="0" step="0.01">
+                <label for="maxPrice">Giá tối đa:</label>
+                <input type="number" id="maxPrice" name="maxPrice" min="0" step="0.01">
+
+                <button type="submit">Lấy sản phẩm</button>
+            </form>
             <div class="row" id="product">
 
             </div>
@@ -300,7 +312,7 @@
             </div>
             <div class="class__video set-bg" data-setbg="img/class-video.jpg">
                 <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1"
-                class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                    class="play-btn video-popup"><i class="fa fa-play"></i></a>
             </div>
         </div>
     </section>
@@ -416,7 +428,7 @@
                                 <span class="icon_star-half_alt"></span>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                                ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -438,7 +450,7 @@
                                 <span class="icon_star-half_alt"></span>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                                ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -460,7 +472,7 @@
                                 <span class="icon_star-half_alt"></span>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                                ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -482,7 +494,7 @@
                                 <span class="icon_star-half_alt"></span>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                                ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -504,7 +516,7 @@
                                 <span class="icon_star-half_alt"></span>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                                ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -526,7 +538,7 @@
                                 <span class="icon_star-half_alt"></span>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
+                                ut labore et dolore magna aliqua viverra lacus vel facilisis.</p>
                         </div>
                     </div>
                 </div>
@@ -604,7 +616,9 @@
             </div>
         </div>
         <div class="map__iframe">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304"
+                height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>
     <!-- Map End -->
@@ -629,7 +643,7 @@
                             <a href="#"><img src="img/footer-logo.png" alt=""></a>
                         </div>
                         <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore dolore magna aliqua.</p>
+                            labore dolore magna aliqua.</p>
                         <div class="footer__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -654,49 +668,54 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
-                        <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                      </p>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="copyright__widget">
-                        <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Site Map</a></li>
-                        </ul>
+                        <p class="copyright__text text-white">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="copyright__widget">
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Site Map</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- Footer Section End -->
+    </footer>
+    <!-- Footer Section End -->
 
-<!-- Search Begin -->
-<div class="search-model">
-    <div class="h-100 d-flex align-items-center justify-content-center">
-        <div class="search-close-switch">+</div>
-        <form class="search-model-form">
-            <input type="text" id="search-input" placeholder="Search here.....">
-        </form>
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
     </div>
-</div>
-<!-- Search End -->
+    <!-- Search End -->
 
-<!-- Js Plugins -->
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="./json/app.js"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/jquery.barfiller.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.nicescroll.min.js"></script>
-<script src="js/main.js"></script>
+    <!-- Js Plugins -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./json/app.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

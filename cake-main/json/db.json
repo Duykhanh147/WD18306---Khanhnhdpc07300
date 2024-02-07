@@ -1,37 +1,214 @@
 {
-    "categories": [
-      { "id": 1, "name": "Bánh" },
-      { "id": 2, "name": "kem" },
-      { "id": 3, "name": "nước uống" }
-    ],
-    "products": [
-      { "id": 1, "name": "DOZEN CUPCAKES", "cate_id": 1, "price": 29.99, "detail": "Rich and moist chocolate cake", "image": "product-1.jpg" },
-      { "id": 2, "name": "Vanilla Cake", "cate_id": 1, "price": 24.99, "detail": "Classic vanilla-flavored cake", "image": "product-2.jpg" },
-      { "id": 3, "name": "Red Velvet Cake", "cate_id": 1, "price": 34.99, "detail": "Velvety smooth red velvet cake", "image": "product-3.jpg" },
-      { "id": 4, "name": "Strawberry Cake", "cate_id": 1, "price": 27.99, "detail": "Sweet and fruity strawberry cake", "image": "product-4.jpg" },
-      { "id": 5, "name": "Lemon Cake", "cate_id": 1, "price": 22.99, "detail": "Zesty lemon-flavored cake", "image": "product-5.jpg" },
-      { "id": 6, "name": "Mango Cake", "cate_id": 1, "price": 31.99, "detail": "Exotic mango-infused cake", "image": "product-6.jpg" },
-      { "id": 7, "name": "Chocolate Ice Cream", "cate_id": 2, "price": 15.99, "detail": "Creamy chocolate-flavored ice cream", "image": "product-7.jpg" },
-      { "id": 8, "name": "Vanilla Ice Cream", "cate_id": 2, "price": 12.99, "detail": "Classic vanilla-flavored ice cream", "image": "product-8.jpg" },
-      { "id": 9, "name": "Strawberry Ice Cream", "cate_id": 2, "price": 18.99, "detail": "Delicious strawberry-flavored ice cream", "image": "product-9.jpg" },
-      { "id": 10, "name": "Mint Chocolate Chip Ice Cream", "cate_id": 2, "price": 20.99, "detail": "Refreshing mint with chocolate chips ice cream", "image": "product-10.jpg" },
-      { "id": 11, "name": "Blueberry Muffin", "cate_id": 1, "price": 14.99, "detail": "Moist and flavorful blueberry muffin", "image": "product-11.jpg" },
-      { "id": 12, "name": "Carrot Cake", "cate_id": 1, "price": 32.99, "detail": "Spiced carrot cake with cream cheese frosting", "image": "product-12.jpg" },
-      { "id": 13, "name": "Pineapple Upside-Down Cake", "cate_id": 1, "price": 26.99, "detail": "Sweet and fruity pineapple upside-down cake", "image": "product-13.jpg" },
-      { "id": 14, "name": "Cookies and Cream Ice Cream", "cate_id": 2, "price": 16.99, "detail": "Rich cookies and cream-flavored ice cream", "image": "product-14.jpg" },
-      { "id": 15, "name": "Coconut Cake", "cate_id": 1, "price": 29.99, "detail": "Tropical coconut-flavored cake", "image": "product-15.jpg" },
-      { "id": 16, "name": "Coffee Ice Cream", "cate_id": 2, "price": 17.99, "detail": "Smooth and aromatic coffee-flavored ice cream", "image": "product-16.jpg" },
-      { "id": 17, "name": "Raspberry Cheesecake", "cate_id": 1, "price": 36.99, "detail": "Creamy cheesecake with tangy raspberry swirls", "image": "product-17.jpg" },
-      { "id": 18, "name": "Peach Sorbet", "cate_id": 3, "price": 21.99, "detail": "Refreshing peach-flavored sorbet", "image": "product-18.jpg" },
-      { "id": 19, "name": "Almond Joy Ice Cream", "cate_id": 2, "price": 19.99, "detail": "Coconut, almond, and chocolate-flavored ice cream", "image": "product-19.jpg" },
-      { "id": 20, "name": "Lavender Lemon Cupcake", "cate_id": 1, "price": 15.99, "detail": "Delicate lavender-infused lemon cupcake", "image": "product-20.jpg" }
-    ],
-    "orders": [
-      { "id": 1, "cus_name": "Bob Johnson", "cus_address": "789 Elm St", "cus_email": "bob@example.com", "phone_number": "555-9876", "created_date": "2024-01-07", "status": "Processing" }
-    ],
-    "order_details": [
-      { "order_id": 1, "product_id": 1, "quantity": 1, "unit_price": "29.99$" },
-      { "order_id": 1, "product_id": 2, "quantity": 2, "unit_price": "24.99$" }
-    ]
-  }
-  
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bánh",
+      "icon": "flaticon-029-cupcake-3"
+    },
+    {
+      "id": 2,
+      "name": "kem",
+      "icon": "flaticon-030-cupcake-2"
+    },
+    {
+      "id": 3,
+      "name": "nước uống",
+      "icon": "flaticon-006-macarons"
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "name": "Vanilla Cake",
+      "cate_id": 1,
+      "price": 24.99,
+      "detail": "Classic vanilla-flavored cake",
+      "image": "product-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Red Velvet Cake",
+      "cate_id": 1,
+      "price": 34.99,
+      "detail": "Velvety smooth red velvet cake",
+      "image": "product-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Strawberry Cake",
+      "cate_id": 1,
+      "price": 27.99,
+      "detail": "Sweet and fruity strawberry cake",
+      "image": "product-4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Lemon Cake",
+      "cate_id": 1,
+      "price": 22.99,
+      "detail": "Zesty lemon-flavored cake",
+      "image": "product-5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Mango Cake",
+      "cate_id": 1,
+      "price": 31.99,
+      "detail": "Exotic mango-infused cake",
+      "image": "product-6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Chocolate Ice Cream",
+      "cate_id": 2,
+      "price": 15.99,
+      "detail": "Creamy chocolate-flavored ice cream",
+      "image": "product-7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Vanilla Ice Cream",
+      "cate_id": 2,
+      "price": 12.99,
+      "detail": "Classic vanilla-flavored ice cream",
+      "image": "product-8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Strawberry Ice Cream",
+      "cate_id": 2,
+      "price": 18.99,
+      "detail": "Delicious strawberry-flavored ice cream",
+      "image": "product-9.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Mint Chocolate Chip Ice Cream",
+      "cate_id": 2,
+      "price": 20.99,
+      "detail": "Refreshing mint with chocolate chips ice cream",
+      "image": "product-10.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Blueberry Muffin",
+      "cate_id": 1,
+      "price": 14.99,
+      "detail": "Moist and flavorful blueberry muffin",
+      "image": "product-11.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Carrot Cake",
+      "cate_id": 1,
+      "price": 32.99,
+      "detail": "Spiced carrot cake with cream cheese frosting",
+      "image": "product-12.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Pineapple Upside-Down Cake",
+      "cate_id": 1,
+      "price": 26.99,
+      "detail": "Sweet and fruity pineapple upside-down cake",
+      "image": "product-13.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Cookies and Cream Ice Cream",
+      "cate_id": 2,
+      "price": 16.99,
+      "detail": "Rich cookies and cream-flavored ice cream",
+      "image": "product-14.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Coconut Cake",
+      "cate_id": 1,
+      "price": 29.99,
+      "detail": "Tropical coconut-flavored cake",
+      "image": "product-15.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Coffee Ice Cream",
+      "cate_id": 2,
+      "price": 17.99,
+      "detail": "Smooth and aromatic coffee-flavored ice cream",
+      "image": "product-16.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Raspberry Cheesecake",
+      "cate_id": 1,
+      "price": 36.99,
+      "detail": "Creamy cheesecake with tangy raspberry swirls",
+      "image": "product-17.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Peach Sorbet",
+      "cate_id": 3,
+      "price": 21.99,
+      "detail": "Refreshing peach-flavored sorbet",
+      "image": "product-18.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Almond Joy Ice Cream",
+      "cate_id": 2,
+      "price": 19.99,
+      "detail": "Coconut, almond, and chocolate-flavored ice cream",
+      "image": "product-19.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Lavender Lemon Cupcake",
+      "cate_id": 1,
+      "price": 15.99,
+      "detail": "Delicate lavender-infused lemon cupcake",
+      "image": "product-20.jpg"
+    },
+    {
+      "name": "bánh",
+      "cate_id": 1,
+      "price": 12.3,
+      "image": "product-9.jpg",
+      "description": "dsfdsf",
+      "id": 21
+    },
+    {
+      "name": "bánh",
+      "cate_id": 1,
+      "price": 131,
+      "image": "product-20.jpg",
+      "description": "dsad",
+      "id": 22
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "cus_name": "Bob Johnson",
+      "cus_address": "789 Elm St",
+      "cus_email": "bob@example.com",
+      "phone_number": "555-9876",
+      "created_date": "2024-01-07",
+      "status": "Processing"
+    }
+  ],
+  "order_details": [
+    {
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 1,
+      "unit_price": "29.99$"
+    },
+    {
+      "order_id": 1,
+      "product_id": 2,
+      "quantity": 1,
+      "unit_price": "24.99$"
+    }
+  ]
+}
