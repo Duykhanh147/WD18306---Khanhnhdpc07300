@@ -2,7 +2,27 @@ document.addEventListener("DOMContentLoaded", function () {
     // Đường dẫn API của bạn
     var apiUrl = "http://localhost:3000";  // Cập nhật đường dẫn phù hợp với server của bạn
 
+    function addorderToUI(order) {
+        var orderList = document.getElementById("order");
     
+        var orderItem = document.createElement("tr");
+        orderItem.innerHTML = `
+            <td><input class="form-check-input" type="checkbox"></td>
+            <td>${order.created_date}</td>
+            <td>${order.id}</td>
+            <td>${order.cus_name}</td>
+            <td>${order.phone_number}</td>
+            <td>${order.status}</td>
+            <td><a class="btn btn-sm btn-primary" href="">xóa</a></td>
+        `;
+    
+        orderList.appendChild(orderItem);
+    }
+    
+    
+    // Gọi API để lấy danh sách sản phẩm bằng Fetch API
+    
+   
     // Hàm để thêm sản phẩm vào giao diện
     function addProductToUI(product) {
         var productList = document.getElementById("product");
@@ -40,6 +60,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     
+    axios.get(`${apiUrl}/orders`)
+    .then(response => {
+      // Kiểm tra trạng thái của response
+      if (response.status !== 200) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      // Xử lý dữ liệu JSON được trả về
+      return response.data;
+    })
+    .then(orders => {
+      // Hiển thị từng đơn hàng lên giao diện
+      orders.forEach(order => {
+        addorderToUI(order);
+      });
+    })
+    .catch(error => {
+      console.error("Lỗi khi tải dữ liệu từ API (orders):", error);
+    });
         
     
     
@@ -199,44 +237,7 @@ categoryForm.addEventListener('submit', function(event) {
 
 
 
-function addorderToUI(order) {
-    var orderList = document.getElementById("order");
 
-    var orderItem = document.createElement("tr");
-    orderItem.innerHTML = `
-        <td><input class="form-check-input" type="checkbox"></td>
-        <td>${order.created_date}</td>
-        <td>${order.id}</td>
-        <td>${order.cus_name}</td>
-        <td>${order.phone_number}</td>
-        <td>${order.status}</td>
-        <td><a class="btn btn-sm btn-primary" href="">xóa</a></td>
-    `;
-
-    orderList.appendChild(orderItem);
-}
-
-
-// Gọi API để lấy danh sách sản phẩm bằng Fetch API
-
-axios.get(`${apiUrl}/orders`)
-  .then(response => {
-    // Kiểm tra trạng thái của response
-    if (response.status !== 200) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    // Xử lý dữ liệu JSON được trả về
-    return response.data;
-  })
-  .then(orders => {
-    // Hiển thị từng đơn hàng lên giao diện
-    orders.forEach(order => {
-      addorderToUI(order);
-    });
-  })
-  .catch(error => {
-    console.error("Lỗi khi tải dữ liệu từ API (orders):", error);
-  });
 
 });
 

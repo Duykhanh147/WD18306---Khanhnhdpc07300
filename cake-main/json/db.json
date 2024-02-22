@@ -14,32 +14,34 @@
       "id": 3,
       "name": "nước uống",
       "icon": "flaticon-006-macarons"
+    },
+    {
+      "name": "bánh4",
+      "id": 4
     }
   ],
   "products": [
     {
-      "id": 2,
       "name": "Vanilla Cake",
-      "cate_id": 1,
-      "price": 24.99,
+      "cate_id": "1",
+      "price": "24.99",
+      "image": "product-5.jpg",
       "detail": "Classic vanilla-flavored cake",
-      "image": "product-2.jpg"
+      "id": 2
     },
     {
-      "id": 3,
       "name": "Red Velvet Cake",
-      "cate_id": 1,
-      "price": 34.99,
+      "cate_id": "1",
+      "price": "34.99",
       "detail": "Velvety smooth red velvet cake",
-      "image": "product-3.jpg"
+      "id": 3
     },
     {
-      "id": 4,
       "name": "Strawberry Cake",
-      "cate_id": 1,
-      "price": 27.99,
+      "cate_id": "1",
+      "price": "27.99",
       "detail": "Sweet and fruity strawberry cake",
-      "image": "product-4.jpg"
+      "id": 4
     },
     {
       "id": 5,
@@ -138,12 +140,11 @@
       "image": "product-16.jpg"
     },
     {
-      "id": 17,
       "name": "Raspberry Cheesecake",
-      "cate_id": 1,
-      "price": 36.99,
+      "cate_id": "1",
+      "price": "36.99",
       "detail": "Creamy cheesecake with tangy raspberry swirls",
-      "image": "product-17.jpg"
+      "id": 17
     },
     {
       "id": 18,
@@ -184,6 +185,54 @@
       "image": "product-20.jpg",
       "description": "dsad",
       "id": 22
+    },
+    {
+      "name": "bánh kem sữa",
+      "cate_id": "1",
+      "price": 131,
+      "image": "product-10.jpg",
+      "detail": "312321",
+      "id": 23
+    },
+    {
+      "name": "1321",
+      "cate_id": "1",
+      "price": 1231,
+      "image": "product-6.jpg",
+      "detail": "3213",
+      "id": 24
+    },
+    {
+      "name": "dsad",
+      "cate_id": "1",
+      "price": 1321,
+      "image": "product-5.jpg",
+      "detail": "dsa",
+      "id": 25
+    },
+    {
+      "name": "42342",
+      "cate_id": "2",
+      "price": 32,
+      "image": "product-5.jpg",
+      "detail": "dsa",
+      "id": 26
+    },
+    {
+      "name": "adsad",
+      "cate_id": "2",
+      "price": 3213,
+      "image": "product-6.jpg",
+      "detail": "3213",
+      "id": 27
+    },
+    {
+      "name": "dsad",
+      "cate_id": "3",
+      "price": 321312,
+      "image": "product-10.jpg",
+      "detail": "32131",
+      "id": 28
     }
   ],
   "orders": [

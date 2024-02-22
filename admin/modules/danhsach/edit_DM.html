@@ -206,50 +206,26 @@
                 <div id="editProduct">
                     <form id="editProductForm" action="#" method="POST">
                         <p>Danh Mục</p>
-                        <select class="form-select" style="background-color: white;" aria-label="Default select example" id="productCategoryId">
-                    
-                        <option selected>Open this select menu</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                      </select>
+                        
                         
                         <div>
                             <p id="productId"></p>
                         </div>
                         <div class="form-group">
                             <label for="productName">Tên Sản Phẩm:</label>
-                            <input type="text" class="form-control" name="EditProductName"
-                                style="background-color: white;" id="productName" required>
+                            <input type="text" class="form-control" name="EditcateName"
+                                style="background-color: white;" id="cateName" required>
                         </div>
 
-                        <div class="form-group">
-                            <label for="productPrice">Giá Sản Phẩm:</label>
-                            <input type="text" class="form-control" name="EditProductPrice"
-                                style="background-color: white;" id="productPrice" name="productPrice" required>
-                        </div>
-                        <!-- <div class="form-group">
-                        <label for="productPrice">Giá Giảm:</label>
-                        <input type="text" class="form-control" style="background-color: white;" id="productPrice" name="productPrice" required>
-                    </div> -->
-                        <div class="mb-3">
-                            <label for="productImage" class="form-label">Hình Ảnh</label>
-
-                            <input type="file" class="form-control" id="productImage" id=" imageNameDisplay" value="" name="EditProductImage" required>
-
-                            <img id="previewImage" style="max-width: 100px; max-height: 100px;" alt="Preview">
-                            <span id="imageNameDisplay"></span>
-                        </div>
-
+                        
                         <div class="form-group">
                             <label for="ProductDescription">Mô Tả Sản Phẩm:</label>
-                            <textarea class="form-control" id="ProductDescription" style="background-color: white;"
+                            <textarea class="form-control" id="cateDescription" style="background-color: white;"
                                 name="productDescription" rows="4" required></textarea>
                         </div>
 
                         <!-- <button type="submit" id="addProductButton" class="btn btn-success" >Thêm Sản Phẩm</button> -->
-                        <button type="button" id="updateProductButton" >Update Product</button>
-                        <button type="button" style="display: none;" id="updateCategoryButton" >Update Product</button>
+                        <button type="button" id="updateCategoryButton" >Update Product</button>
                         <button type="button" style="display: none;" id="addProductButton">Add Product</button>
                         <button type="button" style="display: none;" id="addCategoryButton">Add Categories</button>
                     </form>

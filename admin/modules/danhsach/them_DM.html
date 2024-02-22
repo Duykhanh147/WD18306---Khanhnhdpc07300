@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="/ASM/admin/img/favicon.ico" rel="icon">
+    <link href="/admin/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="/ASM/admin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/ASM/admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="/admin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="/ASM/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/admin/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="/ASM/admin/css/style.css" rel="stylesheet">
+    <link href="/admin/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -45,12 +45,12 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
-                <a href="/ASM/admin/index.html" class="navbar-brand mx-4 mb-3">
+                <a href="/admin/index.html" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="/ASM/admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="/admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="/ASM/admin/index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/admin/index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Sản Phẩm</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -90,7 +90,7 @@
         <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
-                <a href="/ASM/admin/index.html" class="navbar-brand d-flex d-lg-none me-4">
+                <a href="/admin/index.html" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
@@ -177,7 +177,7 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-
+            
 
             <!-- Typography Start -->
             <div class="container mt-5">
@@ -189,11 +189,6 @@
                         <input type="text" class="form-control" style="background-color: white;" id="categoryName" name="productName" required>
                     </div>
         
-                    <div class="mb-3">
-                        <label for="cateImage" class="form-label">Hình Ảnh</label>
-                        
-                        <input type="file" class="form-control" id="cateImage" required>
-                      </div>
         
                     <div class="form-group">
                         <label for="categoryDescription">Mô Tả Sản Phẩm:</label>
@@ -202,6 +197,8 @@
         
                     <!-- <button type="submit" id="addProductButton" class="btn btn-success" onclick="addProduct()">Thêm Sản Phẩm</button> -->
                     <button type="button" id="addCategoryButton">Add Product</button>
+                    <button type="button" style="display: none;" id="updateProductButton" >Update Product</button>
+                    <button type="button" style="display: none;" id="addCategoryButton">Add Product</button>
                 </form>
             </div>
         
@@ -239,20 +236,20 @@
     </div>
 
     <!-- JavaScript Libraries -->
-    <script src="/ASM/cake-main/json/admin.js"></script>
+    <script src="/cake-main/json/admin.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/ASM/admin/lib/chart/chart.min.js"></script>
-    <script src="/ASM/admin/lib/easing/easing.min.js"></script>
-    <script src="/ASM/admin/lib/waypoints/waypoints.min.js"></script>
-    <script src="/ASM/admin/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/ASM/admin/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="/ASM/admin/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="/ASM/admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="/admin/lib/chart/chart.min.js"></script>
+    <script src="/admin/lib/easing/easing.min.js"></script>
+    <script src="/admin/lib/waypoints/waypoints.min.js"></script>
+    <script src="/admin/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/admin/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/admin/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="/ASM/admin/js/main.js"></script>
+    <script src="/admin/js/main.js"></script>
     
 </body>
 
